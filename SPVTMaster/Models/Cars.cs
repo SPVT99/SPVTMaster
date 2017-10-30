@@ -29,7 +29,7 @@ namespace SPVTMaster.Models
         [Display(Name = " License Plate")]
         [StringLength(60, MinimumLength = 3)]
         [Required]
-        public string LicensePlate { get; set; }
+        public string licensePlate { get; set; }
 
         [Display(Name ="Date Time")]
         [DataType(DataType.DateTime)]
