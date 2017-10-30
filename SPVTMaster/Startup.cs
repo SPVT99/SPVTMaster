@@ -29,7 +29,7 @@ namespace SPVTMaster
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=Cars.db;Trusted_Connection=True;";
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=Automobile.db;Trusted_Connection=True;";
             services.AddDbContext<AutomobileContext>(options => options.UseSqlServer(connection));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
