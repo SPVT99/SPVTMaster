@@ -29,7 +29,7 @@ namespace SPVTMaster.Migrations
                         .IsRequired()
                         .HasMaxLength(60);
 
-                    b.Property<int>("DateTime");
+                    b.Property<DateTime>("DateTime");
 
                     b.Property<string>("Make")
                         .IsRequired()

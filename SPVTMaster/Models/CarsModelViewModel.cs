@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace SPVTMaster.Models
 {
-    public class CarsMakeViewModel
+    public class CarsModelViewModel
     {
         public List<Cars> cars;
-        public SelectList Make;
-        public string carsMake { get; set; }
+        public SelectList Model;
+        public string carsModel { get; set; }
     }
 }

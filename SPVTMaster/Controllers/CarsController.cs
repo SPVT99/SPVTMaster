@@ -21,6 +21,8 @@ namespace SPVTMaster.Controllers
         // GET: Cars
         public async Task<IActionResult> Index(string carsMake, string searchString)
         {
+            String b = System.DateTime.Now.ToString("dd.MM.yyyy");
+
             var cars = from m in _context.Cars
                        select m;
             if (!String.IsNullOrEmpty(searchString))
@@ -43,6 +45,7 @@ namespace SPVTMaster.Controllers
             carsMakeVM.cars = await cars.ToListAsync();
 
             return View(carsMakeVM);
+
 
             //return View(await _context.Cars.ToListAsync());
         }

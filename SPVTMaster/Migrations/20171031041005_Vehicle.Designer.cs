@@ -11,8 +11,8 @@ using System;
 namespace SPVTMaster.Migrations
 {
     [DbContext(typeof(AutomobileContext))]
-    [Migration("20171030053737_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20171031041005_Vehicle")]
+    partial class Vehicle
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,7 +30,7 @@ namespace SPVTMaster.Migrations
                         .IsRequired()
                         .HasMaxLength(60);
 
-                    b.Property<int>("DateTime");
+                    b.Property<DateTime>("DateTime");
 
                     b.Property<string>("Make")
                         .IsRequired()

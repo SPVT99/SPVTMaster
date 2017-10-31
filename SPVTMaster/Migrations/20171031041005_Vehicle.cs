@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace SPVTMaster.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class Vehicle : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,7 +16,7 @@ namespace SPVTMaster.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Color = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
-                    DateTime = table.Column<int>(type: "int", nullable: false),
+                    DateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Make = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
                     Model = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     licensePlate = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false)

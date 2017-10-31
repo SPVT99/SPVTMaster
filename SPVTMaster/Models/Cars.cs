@@ -31,8 +31,10 @@ namespace SPVTMaster.Models
         [Required]
         public string licensePlate { get; set; }
 
-        [Display(Name ="Date Time")]
+        [Display(Name = "Date Time")]
         [DataType(DataType.DateTime)]
-        public int DateTime { get; set; }
+        public DateTime DateTime { get; set; }
+
+
     }
 }
