@@ -10,6 +10,7 @@ namespace SPVTMaster.Models
     {
         public int Id { get; set; }
 
+        public DateTime DateTimeStamp { get; set; }
 
         //[RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
         [StringLength(60, MinimumLength = 3)]
@@ -31,9 +32,9 @@ namespace SPVTMaster.Models
         [Required]
         public string licensePlate { get; set; }
 
-        [Display(Name = "Date Time")]
-        [DataType(DataType.DateTime)]
-        public DateTime DateTime { get; set; }
+        //[Display(Name = "Date Time")]
+        //[DataType(DataType.DateTime)]
+        //public DateTime DateTime { get; set; }
 
 
     }

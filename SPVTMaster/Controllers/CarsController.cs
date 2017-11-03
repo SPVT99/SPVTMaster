@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SPVTMaster.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace SPVTMaster.Controllers
 {
@@ -21,7 +22,7 @@ namespace SPVTMaster.Controllers
         // GET: Cars
         public async Task<IActionResult> Index(string carsMake, string searchString)
         {
-            String b = System.DateTime.Now.ToString("dd.MM.yyyy");
+
 
             var cars = from m in _context.Cars
                        select m;
@@ -71,6 +72,17 @@ namespace SPVTMaster.Controllers
         // GET: Cars/Create
         public IActionResult Create()
         {
+            //var vl = new vehicleViolationList();
+
+            //vl.VehicleViolation = new List<SelectListItem>
+            // {
+            //    new SelectListItem {Value="1", Text="You must only park in 1 parking space at a time"},
+            //    new SelectListItem {Value="2", Text="You must only park in designated parking spaces"},
+            //    new SelectListItem {Value="3", Text="You must pull forward into a parking space. Do not pull through or back into any parking spaces."},
+            //    new SelectListItem {Value="4", Text="You must have an Amazon-issued carpool sign in order to park in designated carpool spaces."},
+            //    new SelectListItem {Value ="5", Text="You must have a handicapped license plate, or current temporary placard in your front window in order to park in handicapped parking spaces."}
+            //   };
+            
             return View();
         }
 
@@ -81,14 +93,19 @@ namespace SPVTMaster.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Make,Model,Color,licensePlate,DateTime")] Cars cars)
         {
+            
             if (ModelState.IsValid)
             {
+                cars.DateTimeStamp = DateTime.Now;
                 _context.Add(cars);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(cars);
         }
+
+
+        
 
         // GET: Cars/Edit/5
         public async Task<IActionResult> Edit(int? id)

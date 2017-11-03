@@ -11,9 +11,10 @@ using System;
 namespace SPVTMaster.Migrations
 {
     [DbContext(typeof(AutomobileContext))]
-    partial class AutomobileContextModelSnapshot : ModelSnapshot
+    [Migration("20171103144754_DateTime Update")]
+    partial class DateTimeUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
