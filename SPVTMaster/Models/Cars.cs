@@ -12,7 +12,7 @@ namespace SPVTMaster.Models
 
         [Display(Name = "Date Time")]
         //[DataType(DataType.DateTime)]
-        public DateTime DateTimeStamp { get; set; }
+        public DateTime DateTimeStamp { set; get; }
 
         //[RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
         [StringLength(60, MinimumLength = 3)]
