@@ -82,7 +82,7 @@ namespace SPVTMaster.Controllers
             //    new SelectListItem {Value="4", Text="You must have an Amazon-issued carpool sign in order to park in designated carpool spaces."},
             //    new SelectListItem {Value ="5", Text="You must have a handicapped license plate, or current temporary placard in your front window in order to park in handicapped parking spaces."}
             //   };
-            
+
             return View();
         }
 
@@ -93,7 +93,7 @@ namespace SPVTMaster.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Make,Model,Color,licensePlate,DateTime")] Cars cars)
         {
-            
+
             if (ModelState.IsValid)
             {
                 cars.DateTimeStamp = DateTime.Now;
@@ -105,7 +105,7 @@ namespace SPVTMaster.Controllers
         }
 
 
-        
+
 
         // GET: Cars/Edit/5
         public async Task<IActionResult> Edit(int? id)
