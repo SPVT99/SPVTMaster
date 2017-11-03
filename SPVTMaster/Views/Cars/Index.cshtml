@@ -26,48 +26,49 @@
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.cars[0].DateTimeStamp)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.cars[0].Make)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.cars[0].Model)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.cars[0].Color)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.cars[0].licensePlate)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cars[0].DateTimeStamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cars[0].Make)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cars[0].Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cars[0].Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cars[0].licensePlate)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.cars) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateTimeStamp)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Make)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Model)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Color)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.licensePlate)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.cars)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateTimeStamp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Make)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.licensePlate)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
