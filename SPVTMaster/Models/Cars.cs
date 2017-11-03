@@ -11,6 +11,7 @@ namespace SPVTMaster.Models
         public int Id { get; set; }
 
         [Display(Name = "Date Time")]
+        //[DataType(DataType.DateTime)]
         public DateTime DateTimeStamp { get; set; }
 
         //[RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
