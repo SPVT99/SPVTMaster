@@ -11,7 +11,7 @@ namespace SPVTMaster.Models
         public int Id { get; set; }
 
         [Display(Name = "Date Time")]
-        //[DataType(DataType.DateTime)]
+        [DataType(DataType.DateTime)]
         public DateTime DateTimeStamp { set; get; }
 
         //[RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
@@ -34,9 +34,8 @@ namespace SPVTMaster.Models
         [Required]
         public string licensePlate { get; set; }
 
-        //[Display(Name = "Date Time")]
-        //[DataType(DataType.DateTime)]
-        //public DateTime DateTime { get; set; }
+        [Display(Name ="Enter Details")]
+        public string TextBox { get; set; }
 
 
     }

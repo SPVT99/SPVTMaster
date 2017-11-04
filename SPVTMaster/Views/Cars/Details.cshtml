@@ -42,6 +42,11 @@
         </dd>
     </dl>
 </div>
+
+<div>
+    @Html.TextBox("Enter Details", null, new { TextBox = "form-contorl"})
+    <input type="submit" value="Submit Note" />
+</div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
