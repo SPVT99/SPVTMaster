@@ -37,6 +37,9 @@ namespace SPVTMaster.Models
         [Display(Name ="Enter Details")]
         public string TextBox { get; set; }
 
+        //[Display(Name ="Violation Type")]
+        //[Required]
+        //public string VehicleViolation { get; set; }
 
     }
 }
