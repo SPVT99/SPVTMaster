@@ -12,11 +12,11 @@ namespace SPVTMaster.Models
         //public string VehicleViolation { set; get; }
         //public List<SelectListItem> Violation { set; get; }
 
-        public int Id { get; set; }
+        //public int Id { get; set; }
+        //[Display(Name = "Violation Type")] 
+        //public string VehicleViolation { get; set; }
+        
 
-        [Display(Name ="Violation Type")]
-        [Required]
-        public string VehicleViolation { get; set; }
 
     }
 }

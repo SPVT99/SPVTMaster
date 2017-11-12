@@ -21,8 +21,8 @@ namespace SPVTMaster.Controllers
         }
 
 
-      
-     
+
+
         // GET: Cars
         public async Task<IActionResult> Index(string carsMake, string searchString)
         {
@@ -58,7 +58,7 @@ namespace SPVTMaster.Controllers
         // GET: Cars/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            
+
             if (id == null)
             {
                 return NotFound();
@@ -76,18 +76,18 @@ namespace SPVTMaster.Controllers
 
         // GET: Cars/Create
         public IActionResult Create()
-        {  
+        {
             //VehicleViolationList db = new VehicleViolationList();
             //List<VehicleViolationList> list = db.VehicleViolation.ToList();
             //ViewBag.VehicleViolationList = list;
 
-             //{
-                //new SelectListItem {Value="1", Text="You must only park in 1 parking space at a time"},
-                //new SelectListItem {Value="2", Text="You must only park in designated parking spaces"},
-                //new SelectListItem {Value="3", Text="You must pull forward into a parking space. Do not pull through or back into any parking spaces."},
-                //new SelectListItem {Value="4", Text="You must have an Amazon-issued carpool sign in order to park in designated carpool spaces."},
-                //new SelectListItem {Value ="5", Text="You must have a handicapped license plate, or current temporary placard in your front window in order to park in handicapped parking spaces."}
-               //};
+            //{
+            //new SelectListItem {Value="1", Text="You must only park in 1 parking space at a time"},
+            //new SelectListItem {Value="2", Text="You must only park in designated parking spaces"},
+            //new SelectListItem {Value="3", Text="You must pull forward into a parking space. Do not pull through or back into any parking spaces."},
+            //new SelectListItem {Value="4", Text="You must have an Amazon-issued carpool sign in order to park in designated carpool spaces."},
+            //new SelectListItem {Value ="5", Text="You must have a handicapped license plate, or current temporary placard in your front window in order to park in handicapped parking spaces."}
+            //};
 
             return View();
         }
@@ -97,7 +97,7 @@ namespace SPVTMaster.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Make,Model,Color,licensePlate,DateTime")] Cars cars)
+        public async Task<IActionResult> Create([Bind("Id,Make,Model,Color,licensePlate,DateTime,Description")] Cars cars)
         {
 
             if (ModelState.IsValid)
@@ -134,7 +134,7 @@ namespace SPVTMaster.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Make,Model,Color,licensePlate,DateTime")] Cars cars)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Make,Model,Color,licensePlate,DateTime,Description")] Cars cars)
         {
             if (id != cars.Id)
             {

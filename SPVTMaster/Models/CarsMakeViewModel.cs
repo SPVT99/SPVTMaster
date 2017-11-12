@@ -12,8 +12,5 @@ namespace SPVTMaster.Models
         public List<Cars> cars;
         public SelectList Make;
         public string carsMake { get; set; }
-
-        //[Display(Name = "Notes")]
-        //public string Discription { get; set; }
     }
 }

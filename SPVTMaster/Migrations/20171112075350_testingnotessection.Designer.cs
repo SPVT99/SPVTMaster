@@ -11,9 +11,10 @@ using System;
 namespace SPVTMaster.Migrations
 {
     [DbContext(typeof(AutomobileContext))]
-    partial class AutomobileContextModelSnapshot : ModelSnapshot
+    [Migration("20171112075350_testingnotessection")]
+    partial class testingnotessection
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,6 +50,18 @@ namespace SPVTMaster.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Cars");
+                });
+
+            modelBuilder.Entity("SPVTMaster.Models.VehicleViolationList", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("VehicleViolation");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("VehicleViolationList");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,5 +1,11 @@
 ﻿@model SPVTMaster.Models.Cars
 
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
 <div>
     <h4>Cars</h4>
     <hr />
@@ -35,16 +41,13 @@
             @Html.DisplayFor(model => model.licensePlate)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.TextBox)
+            @Html.DisplayNameFor(model => model.Description)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.TextBox)
+            @Html.DisplayFor(model => model.Description)
         </dd>
     </dl>
 </div>
-            @*<form asp-controller="Cars" asp-action="Details" method="post">
-                <input asp-for="TextBox" type="text" value="submit" />
-            </form>*@
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>

@@ -11,9 +11,10 @@ using System;
 namespace SPVTMaster.Migrations
 {
     [DbContext(typeof(AutomobileContext))]
-    partial class AutomobileContextModelSnapshot : ModelSnapshot
+    [Migration("20171104101435_testingtextbox")]
+    partial class testingtextbox
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,16 +32,14 @@ namespace SPVTMaster.Migrations
 
                     b.Property<DateTime>("DateTimeStamp");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(1024);
-
                     b.Property<string>("Make")
                         .IsRequired()
                         .HasMaxLength(60);
 
                     b.Property<string>("Model")
                         .IsRequired();
+
+                    b.Property<string>("TextBox");
 
                     b.Property<string>("licensePlate")
                         .IsRequired()
@@ -49,6 +48,19 @@ namespace SPVTMaster.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Cars");
+                });
+
+            modelBuilder.Entity("SPVTMaster.Models.VehicleViolationList", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("VehicleViolation")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("VehicleViolationList");
                 });
 #pragma warning restore 612, 618
         }
