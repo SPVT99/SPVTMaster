@@ -77,17 +77,7 @@ namespace SPVTMaster.Controllers
         // GET: Cars/Create
         public IActionResult Create()
         {
-            //VehicleViolationList db = new VehicleViolationList();
-            //List<VehicleViolationList> list = db.VehicleViolation.ToList();
-            //ViewBag.VehicleViolationList = list;
-
-            //{
-            //new SelectListItem {Value="1", Text="You must only park in 1 parking space at a time"},
-            //new SelectListItem {Value="2", Text="You must only park in designated parking spaces"},
-            //new SelectListItem {Value="3", Text="You must pull forward into a parking space. Do not pull through or back into any parking spaces."},
-            //new SelectListItem {Value="4", Text="You must have an Amazon-issued carpool sign in order to park in designated carpool spaces."},
-            //new SelectListItem {Value ="5", Text="You must have a handicapped license plate, or current temporary placard in your front window in order to park in handicapped parking spaces."}
-            //};
+          
 
             return View();
         }
