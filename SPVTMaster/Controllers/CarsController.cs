@@ -11,11 +11,11 @@ using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
 namespace SPVTMaster.Controllers
 {
-    public class CarsController : Controller
+    public class Cars : Controller
     {
         private readonly AutomobileContext _context;
 
-        public CarsController(AutomobileContext context)
+        public Cars(AutomobileContext context)
         {
             _context = context;
         }
@@ -87,7 +87,7 @@ namespace SPVTMaster.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Make,Model,Color,licensePlate,DateTime,Description")] Cars cars)
+        public async Task<IActionResult> Create([Bind("Id,Make,Model,Color,licensePlate,DateTime,Description")] Models.Cars cars)
         {
 
             if (ModelState.IsValid)
@@ -124,7 +124,7 @@ namespace SPVTMaster.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Make,Model,Color,licensePlate,DateTime,Description")] Cars cars)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Make,Model,Color,licensePlate,DateTime,Description")] Models.Cars cars)
         {
             if (id != cars.Id)
             {
