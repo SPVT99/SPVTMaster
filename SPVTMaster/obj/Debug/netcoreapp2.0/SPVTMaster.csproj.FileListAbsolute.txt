@@ -1,0 +1,12 @@
+C:\Users\ryanb\Desktop\SPVTMaster\SPVTMaster\bin\Debug\netcoreapp2.0\SPVTMaster.deps.json
+C:\Users\ryanb\Desktop\SPVTMaster\SPVTMaster\bin\Debug\netcoreapp2.0\SPVTMaster.runtimeconfig.json
+C:\Users\ryanb\Desktop\SPVTMaster\SPVTMaster\bin\Debug\netcoreapp2.0\SPVTMaster.runtimeconfig.dev.json
+C:\Users\ryanb\Desktop\SPVTMaster\SPVTMaster\bin\Debug\netcoreapp2.0\SPVTMaster.dll
+C:\Users\ryanb\Desktop\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.csprojResolveAssemblyReference.cache
+C:\Users\ryanb\Desktop\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.csproj.CoreCompileInputs.cache
+C:\Users\ryanb\Desktop\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.AssemblyInfoInputs.cache
+C:\Users\ryanb\Desktop\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.AssemblyInfo.cs
+C:\Users\ryanb\Desktop\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\ryanb\Desktop\SPVTMaster\SPVTMaster\bin\Debug\netcoreapp2.0\SPVTMaster.pdb
+C:\Users\ryanb\Desktop\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.dll
+C:\Users\ryanb\Desktop\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.pdb
