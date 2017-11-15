@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SPVTMaster.Models;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SPVTMaster.Controllers
 {
@@ -24,6 +25,8 @@ namespace SPVTMaster.Controllers
 
 
         // GET: Cars
+        [Authorize]
+        [Route("[controller]/[action]")]
         public async Task<IActionResult> Index(string carsMake, string searchString)
         {
 
@@ -56,6 +59,8 @@ namespace SPVTMaster.Controllers
         }
 
         // GET: Cars/Details/5
+        [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
 
@@ -75,6 +80,8 @@ namespace SPVTMaster.Controllers
         }
 
         // GET: Cars/Create
+        
+        [Authorize]
         public IActionResult Create()
         {
           
@@ -86,6 +93,7 @@ namespace SPVTMaster.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Make,Model,Color,licensePlate,DateTime,Description")] Models.Cars cars)
         {
@@ -104,6 +112,7 @@ namespace SPVTMaster.Controllers
 
 
         // GET: Cars/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -124,6 +133,7 @@ namespace SPVTMaster.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Make,Model,Color,licensePlate,DateTime,Description")] Models.Cars cars)
         {
             if (id != cars.Id)
@@ -155,6 +165,10 @@ namespace SPVTMaster.Controllers
         }
 
         // GET: Cars/Delete/5
+        //[HttpGet("admin")]
+        //[Authorize(Policy = "AdminOnly")]
+        [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
