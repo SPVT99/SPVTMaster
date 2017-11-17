@@ -29,7 +29,8 @@ namespace SPVTMaster
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=Automobile.db;Trusted_Connection=True;";
+            //var connection = @"Server=(localdb)\mssqllocaldb;Database=Automobile.db;Trusted_Connection=True;";
+            var connection = @"Server=localhost;Database=master;Trusted_Connection=True";
             services.AddDbContext<AutomobileContext>(options => options.UseSqlServer(connection));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
@@ -53,7 +54,7 @@ namespace SPVTMaster
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler(" / Home/Error");
             }
 
             app.UseStaticFiles();
