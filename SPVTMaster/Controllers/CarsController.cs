@@ -25,7 +25,7 @@ namespace SPVTMaster.Controllers
 
 
         // GET: Cars
-        
+        [Authorize]
         [Route("[controller]/[action]")]
         public async Task<IActionResult> Index(string carsMake, string searchString)
         {
