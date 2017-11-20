@@ -7,7 +7,7 @@ namespace SPVTMaster.Models
 {
     public class MainViewModel
     {
-        public string SelectedAnswer { get; set; }
-        public List<CatagoryList> ListCategory {get; set;}
+        public string Selectedanswer { get; set; }
+        public List<Category> ListCategory { get; set; }
     }
 }
