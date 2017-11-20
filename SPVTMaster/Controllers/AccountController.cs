@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using SPVTMaster.Models;
 using SPVTMaster.Models.AccountViewModels;
 using SPVTMaster.Services;
-
 namespace SPVTMaster.Controllers
 {
     [Authorize]
@@ -205,7 +200,7 @@ namespace SPVTMaster.Controllers
         }
 
         [HttpGet]
-        [AllowAnonymous]
+        [Authorize(Roles ="Admin, Manager")]
         public IActionResult Register(string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
@@ -213,7 +208,7 @@ namespace SPVTMaster.Controllers
         }
 
         [HttpPost]
-        [AllowAnonymous]
+        [Authorize(Roles = "Admin, Manager")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
         {

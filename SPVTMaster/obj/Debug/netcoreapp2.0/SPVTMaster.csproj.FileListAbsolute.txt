@@ -29,7 +29,6 @@ C:\Users\ryanb\Desktop\SPVT\SPVTMaster\SPVTMaster\bin\Debug\netcoreapp2.0\SPVTMa
 C:\Users\ryanb\Desktop\SPVT\SPVTMaster\SPVTMaster\bin\Debug\netcoreapp2.0\SPVTMaster.pdb
 C:\Users\ryanb\Desktop\SPVT\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.csprojResolveAssemblyReference.cache
 C:\Users\ryanb\Desktop\SPVT\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.csproj.CoreCompileInputs.cache
-C:\Users\ryanb\Desktop\SPVT\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 C:\Users\ryanb\Desktop\SPVT\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.AssemblyInfoInputs.cache
 C:\Users\ryanb\Desktop\SPVT\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.AssemblyInfo.cs
 C:\Users\ryanb\Desktop\SPVT\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.dll
