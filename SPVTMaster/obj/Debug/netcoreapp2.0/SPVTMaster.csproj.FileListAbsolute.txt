@@ -45,3 +45,4 @@ C:\Users\Mikel\Contacts\Desktop\spvt\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMast
 C:\Users\Mikel\Contacts\Desktop\spvt\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.AssemblyInfo.cs
 C:\Users\Mikel\Contacts\Desktop\spvt\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.dll
 C:\Users\Mikel\Contacts\Desktop\spvt\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.pdb
+C:\Users\ryanb\Desktop\SPVT\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

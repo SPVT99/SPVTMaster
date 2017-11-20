@@ -79,8 +79,8 @@ namespace SPVTMaster
                 app.UseExceptionHandler(" / Home/Error");
             }
 
-            app.UseReact(config =>
-            {
+            //app.UseReact(config =>
+            //{
                 // If you want to use server-side rendering of React components,
                 // add all the necessary JavaScript files here. This includes
                 // your components as well as all of their dependencies.
@@ -96,7 +96,7 @@ namespace SPVTMaster
                 //config
                 //  .SetLoadBabel(false)
                 //  .AddScriptWithoutTransform("~/Scripts/bundle.server.js");
-            });
+            //});
 
             app.UseStaticFiles();
 

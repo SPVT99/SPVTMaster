@@ -10,13 +10,15 @@ namespace SPVTMaster.Models
     public class AutomobileContext : DbContext
     {
         public AutomobileContext(DbContextOptions<AutomobileContext> options) : base(options)
-        {
+        { 
 
         }
 
         public DbSet<Cars> Cars { get; set; }
 
         public DbSet<SPVTMaster.Models.ApplicationUser> ApplicationUser { get; set; }
+
+        public DbSet<CatagoryList> Catagory { get; set; }
 
         //public DbSet<SPVTMaster.Models.VehicleViolationList> VehicleViolationList { get; set; }
 
