@@ -1,5 +1,7 @@
 ﻿@model SPVTMaster.Models.Cars
 
+
+
 <h4>Cars</h4>
 <hr />
 <div class="row">
@@ -32,30 +34,17 @@
                 <input asp-for="licensePlate" class="form-control" />
                 <span asp-validation-for="licensePlate" class="text-danger"></span>
             </div>
+            @*THIS WAS ALL MIKE THIS MOTHER FUCKING BADASS*@
             <div class="form-group">
-                <label asp-for="Violation1" class="control-label"></label>
-                <input asp-for="Violation1" class="form-control" />
-                <span asp-validation-for="Violation1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Violation2" class="control-label"></label>
-                <input asp-for="Violation2" class="form-control" />
-                <span asp-validation-for="Violation2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Violation3" class="control-label"></label>
-                <input asp-for="Violation3" class="form-control" />
-                <span asp-validation-for="Violation3" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Violation4" class="control-label"></label>
-                <input asp-for="Violation4" class="form-control" />
-                <span asp-validation-for="Violation4" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Violation5" class="control-label"></label>
-                <input asp-for="Violation5" class="form-control" />
-                <span asp-validation-for="Violation5" class="text-danger"></span>
+                <label asp-for="Violation" class="control-label"></label>
+                <select asp-for="Violation" class="form-control" id="violation">
+                    <option value="You must only park in 1 parking space at a time">You must only park in 1 parking space at a time</option>
+                    <option value="You must only park in designated parking spaces">You must only park in designated parking spaces</option>
+                    <option value="You must pull forward into a parking space. Do not pull through or back into any parking spaces">You must pull forward into a parking space. Do not pull through or back into any parking spaces</option>
+                    <option value="You must have an Amazon-issued carpool sign in order to park in designated carpool spaces.">You must have an Amazon-issued carpool sign in order to park in designated carpool spaces.</option>
+                    <option value="You must have a handicapped license plate, or current temporary placard in your front window in order to park in a handicapped parking spaces.">You must have a handicapped license plate, or current temporary placard in your front window in order to park in a handicapped parking spaces.</option>
+                </select>
+                <span asp-validation-for="Violation" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
@@ -71,3 +60,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+

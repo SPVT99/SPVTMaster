@@ -19,10 +19,8 @@ namespace SPVTMaster.Controllers
         }
 
         // GET: Cars
-         public async Task<IActionResult> Index(string carsMake, string searchString)
+        public async Task<IActionResult> Index(string carsMake, string searchString)
         {
-
-
             var cars = from m in _context.Cars
                        select m;
             if (!String.IsNullOrEmpty(searchString))
@@ -47,13 +45,12 @@ namespace SPVTMaster.Controllers
             return View(carsMakeVM);
 
 
-            //return View(await _context.Cars.ToListAsync());
+           // return View(await _context.Cars.ToListAsync());
         }
 
         // GET: Cars/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-           
             if (id == null)
             {
                 return NotFound();
@@ -80,7 +77,7 @@ namespace SPVTMaster.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,DateTimeStamp,Make,Model,Color,licensePlate,Violation1,Violation2,Violation3,Violation4,Violation5")] Cars cars)
+        public async Task<IActionResult> Create([Bind("Id,DateTimeStamp,Make,Model,Color,licensePlate,Violation")] Cars cars)
         {
             if (ModelState.IsValid)
             {
@@ -113,7 +110,7 @@ namespace SPVTMaster.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,DateTimeStamp,Make,Model,Color,licensePlate,Violation1,Violation2,Violation3,Violation4,Violation5")] Cars cars)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,DateTimeStamp,Make,Model,Color,licensePlate,Violation")] Cars cars)
         {
             if (id != cars.Id)
             {

@@ -88,15 +88,7 @@ namespace SPVTMaster.Migrations
                     b.Property<string>("Model")
                         .IsRequired();
 
-                    b.Property<string>("Violation1");
-
-                    b.Property<string>("Violation2");
-
-                    b.Property<string>("Violation3");
-
-                    b.Property<string>("Violation4");
-
-                    b.Property<string>("Violation5");
+                    b.Property<string>("Violation");
 
                     b.Property<string>("licensePlate")
                         .IsRequired()

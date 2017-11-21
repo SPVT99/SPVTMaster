@@ -4,31 +4,26 @@
 
 
 
-@{
-    ViewData["Title"] = "Create Violation";
-}
-
-<h2>Create</h2>
 
 <h4>Cars</h4>
 <hr />
-<div class="row ">
-    <div class="col-md-4 table">
+<div class="row">
+    <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Make" class="control-label"></label>
-                <input id="make" asp-for="Make" class="form-control" />
+                <input asp-for="Make" class="form-control" id="make" />
                 <span asp-validation-for="Make" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Model" class="control-label"></label>
-                <input id="model" asp-for="Model" class="form-control" />
+                <input asp-for="Model" id="model" class="form-control" />
                 <span asp-validation-for="Model" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Color" class="control-label"></label>
-                <input id="color" asp-for="Color" class="form-control" />
+                <input asp-for="Color" id="color" class="form-control" />
                 <span asp-validation-for="Color" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -36,16 +31,19 @@
                 <input asp-for="licensePlate" id="lpn" class="form-control" />
                 <span asp-validation-for="licensePlate" class="text-danger"></span>
             </div>
-            <input asp-for="Violation1" id="Test1" type ="radio" name="vt" value="You must only park in 1 parking space at a time" />You must only park in 1 parking space at a time
-            <br />
-            <input asp-for="Violation2" type="radio" name="vt" value="You must only park in designated parking spaces" />You must only park in designated parking spaces
-            <br />
-            <input asp-for="Violation3" type="radio" name="vt" value="You must pull forward into a parking space. Do not pull through or back into any parking spaces." />You must pull forward into a parking space. Do not pull through or back into any parking spaces.
-            <br />
-            <input asp-for="Violation4" type="radio" name="vt" value="You must have an Amazon-issued carpool sign in order to park in designated carpool spaces." />You must have an Amazon-issued carpool sign in order to park in designated carpool spaces.
-            <br />
-            <input asp-for="Violation5" type="radio" name="vt" value="You must have a handicapped license plate, or current temporary placard in your front window in order to park in a handicapped parking spaces." />You must have a handicapped license plate, or current temporary placard in your front window in order to park in a handicapped parking spaces.
-            <br />
+            @*THIS WAS ALL MIKE THIS MOTHER FUCKING BADASS*@
+            <div class="form-group">
+                <label asp-for="Violation" class="control-label"></label>
+                <select asp-for="Violation" class="form-control" id="violation">
+                    <option  value="You must only park in 1 parking space at a time">You must only park in 1 parking space at a time</option>
+                    <option  value="You must only park in designated parking spaces">You must only park in designated parking spaces</option>
+                    <option  value="You must pull forward into a parking space. Do not pull through or back into any parking spaces">You must pull forward into a parking space. Do not pull through or back into any parking spaces</option>
+                    <option  value="You must have an Amazon-issued carpool sign in order to park in designated carpool spaces." >You must have an Amazon-issued carpool sign in order to park in designated carpool spaces.</option>
+                    <option value="You must have a handicapped license plate, or current temporary placard in your front window in order to park in a handicapped parking spaces.">You must have a handicapped license plate, or current temporary placard in your front window in order to park in a handicapped parking spaces.</option>
+                </select>
+                <span asp-validation-for="Violation" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" onclick="validation()" />
             </div>
@@ -60,3 +58,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+

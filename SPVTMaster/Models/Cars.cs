@@ -41,14 +41,7 @@ namespace SPVTMaster.Models
         [Required]
         public string licensePlate { get; set; }
 
-        public string Violation1 { get; set; }
-
-        public string Violation2 { get; set; }
-
-        public string Violation3 { get; set; }
-
-        public string Violation4 { get; set; }
-
-        public string Violation5 { get; set; }
+        public string Violation { get; set; }
+        
     }
 }

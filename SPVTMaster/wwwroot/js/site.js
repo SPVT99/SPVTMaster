@@ -4,9 +4,8 @@ function validation() {
     var model = document.getElementById("model").value;
     var color = document.getElementById("color").value;
     var lpn = document.getElementById("lpn").value;
-    var vtype = document.getElementById("vtype").value;
 
-    if (make === "" && model === "" && color === "" && lpn === "" && vtype === "") {
+    if (make === "" && model === "" && color === "" && lpn === "") {
         alert("DON'T BE A BANAN!!!!")
     }
     else if (make === "" || make == null) {
@@ -21,9 +20,7 @@ function validation() {
     else if (lpn === "" || lpn == null) {
         alert("License Plate input must be filled out!")
     }
-    else if (vtype === "" || vtype == null) {
-        alert("Violation Type input must be filled out!")
-    }
+    
 }
 
 

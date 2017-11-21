@@ -45,7 +45,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.cars)  
+        @foreach (var item in Model.cars)
         {
             <tr>
                 <td>
@@ -64,19 +64,19 @@
                     @Html.DisplayFor(modelItem => item.licensePlate)
                 </td>
                 <td>
-                  <div class="dropdown">
-                        <div  data-toggle="dropdown">
+                    <div class="dropdown">
+                        <div data-toggle="dropdown">
                             <div class="container1">
                                 <span class="glyphicon glyphicon-menu-hamburger"></span>
-                                </div>
-                           </div>
+                            </div>
+                        </div>
                         <ul class="dropdown-menu">
                             <li><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></li>
                             <li><a asp-action="Details" asp-route-id="@item.Id">Details</a></li>
                             <li><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></li>
                         </ul>
-                    </div> 
-                   
+                    </div>
+
                 </td>
             </tr>
         }
