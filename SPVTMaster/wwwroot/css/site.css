@@ -43,7 +43,21 @@ table{
     padding: 0.8em;
     width:auto;
 }
-
+.viewbox {
+    border: 0.7em solid orange;
+    background-color: gray;
+    padding: 0.8em;
+    width: auto;
+}
+.footnote{
+    position: absolute;
+    bottom: 0;
+    color: orange;
+}
+.title{
+    font-size:1.7em;
+    color:orange;
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
@@ -72,4 +86,12 @@ table, th{
 .glyphicon {
     height: 2em;
     width: 2em;
+}
+
+
+.divbox {
+    float: left;
+    display: inline-block;
+    text-align: center;
+
 }

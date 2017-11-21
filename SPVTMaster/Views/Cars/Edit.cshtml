@@ -2,8 +2,8 @@
 
 
 
-<h4>Cars</h4>
-<hr />
+<h4 class="title">Edit Violation</h4>
+<div class="viewbox">
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
@@ -52,11 +52,12 @@
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
-
+<br />
+<div class="divbox">
+    <a  class="form-control" asp-action="Index">Back to List</a>
+</div>
+    
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

@@ -1,8 +1,8 @@
 ﻿@model SPVTMaster.Models.Cars
 
 <div>
-    <h4>Cars</h4>
-    <hr />
+    <h4 class="title">Vioation Details</h4>
+   <div class="viewbox"> 
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.DateTimeStamp)
@@ -41,9 +41,13 @@
             @Html.DisplayFor(model => model.Violation)
         </dd>
     </dl>
+       </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<br />
+<div class="divbox">
+    <a class="form-control" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> 
+    <br />
+    <a class="form-control" asp-action="Index">Back to List</a>
 </div>
+<br />
 

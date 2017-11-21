@@ -4,26 +4,30 @@
     ViewData["Title"] = "Vehicles";
 }
 
-<h2></h2>
+<h2 class="title">
+    Current Violations</h2>
+<br />
+<div class="divbox">
+         <div class="divbox">
+             <a asp-action="Create" class="form-control">Create New Vehicle </a>
 
-<p>
-    <a asp-action="Create">Create New Vehicle </a>
-</p>
+             <br />
+             <form class="divbox" asp-controller="Cars" asp-action="Index" method="get">
 
-<form asp-controller="Cars" asp-action="Index" method="get">
-    <p>
-        <select asp-for="carsMake" asp-items="Model.Make">
-            <option value="">Make</option>
-        </select>
+                 <select asp-for="carsMake" class="form-control modelsearch" asp-items="Model.Make">
+                     <option value="">Search by Make</option>
+                 </select>
+                 <br />
+                 <input class="form-control" type="submit" value="Search Submit" />
 
+                 <br />
+             </form>
+         </div>
+    </div>
+ <br />
 
-        search:
-        <input type="submit" value="Filter" />
-
-    </p>
-
-</form>
 <table class="table">
+    <!--a href="~/Views/Cars/Index.cshtml">~/Views/Cars/Index.cshtml</!--a -->
     <thead>
         <tr>
             <th>
