@@ -30,6 +30,7 @@ function validation() {
 // ***** Dropdown menu for cars edit ***** //
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
+    console.log(this);
 }
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {

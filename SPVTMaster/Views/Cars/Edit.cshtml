@@ -1,11 +1,5 @@
 ﻿@model SPVTMaster.Models.Cars
 
-@{
-    ViewData["Title"] = "Edit";
-}
-
-<h2>Edit</h2>
-
 <h4>Cars</h4>
 <hr />
 <div class="row">
@@ -39,9 +33,29 @@
                 <span asp-validation-for="licensePlate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
+                <label asp-for="Violation1" class="control-label"></label>
+                <input asp-for="Violation1" class="form-control" />
+                <span asp-validation-for="Violation1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Violation2" class="control-label"></label>
+                <input asp-for="Violation2" class="form-control" />
+                <span asp-validation-for="Violation2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Violation3" class="control-label"></label>
+                <input asp-for="Violation3" class="form-control" />
+                <span asp-validation-for="Violation3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Violation4" class="control-label"></label>
+                <input asp-for="Violation4" class="form-control" />
+                <span asp-validation-for="Violation4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Violation5" class="control-label"></label>
+                <input asp-for="Violation5" class="form-control" />
+                <span asp-validation-for="Violation5" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />

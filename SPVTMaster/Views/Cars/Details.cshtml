@@ -1,11 +1,5 @@
 ﻿@model SPVTMaster.Models.Cars
 
-@{
-    ViewData["Title"] = "Details";
-}
-
-<h2>Details</h2>
-
 <div>
     <h4>Cars</h4>
     <hr />
@@ -41,14 +35,63 @@
             @Html.DisplayFor(model => model.licensePlate)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.Violation1)
+        </dt>
+        <dd>  
+          @Html.DisplayFor(model => model.Violation1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Violation2)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Description)
+            @Html.DisplayFor(model => model.Violation2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Violation3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Violation3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Violation4)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Violation4)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Violation5)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Violation5)
         </dd>
     </dl>
 </div>
+
+
+
+
+<p id="Test">
+
+</p>
+
+
+
+
+
+
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+<script>
+    document.getElementById('Test1').value = Test1;
+
+    if (Test1 === checked)
+    {
+        document.getElementById('Test').innerHTML = Test1;
+    }
+
+
+
+</script>
+

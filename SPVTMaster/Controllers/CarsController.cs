@@ -6,28 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SPVTMaster.Models;
-using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
-using Microsoft.AspNetCore.Authorization;
 
 namespace SPVTMaster.Controllers
 {
-    public class Cars : Controller
+    public class CarsController : Controller
     {
         private readonly AutomobileContext _context;
 
-        public Cars(AutomobileContext context)
+        public CarsController(AutomobileContext context)
         {
             _context = context;
         }
 
-
-
-
         // GET: Cars
-        [Authorize]
-        [Route("[controller]/[action]")]
-        public async Task<IActionResult> Index(string carsMake, string searchString)
+         public async Task<IActionResult> Index(string carsMake, string searchString)
         {
 
 
@@ -59,11 +51,9 @@ namespace SPVTMaster.Controllers
         }
 
         // GET: Cars/Details/5
-        [HttpGet]
-        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
-
+           
             if (id == null)
             {
                 return NotFound();
@@ -80,12 +70,8 @@ namespace SPVTMaster.Controllers
         }
 
         // GET: Cars/Create
-        
-        [Authorize]
         public IActionResult Create()
         {
-          
-
             return View();
         }
 
@@ -93,11 +79,9 @@ namespace SPVTMaster.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [Authorize]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Make,Model,Color,licensePlate,DateTime,Descriptiion")] Models.Cars cars)
+        public async Task<IActionResult> Create([Bind("Id,DateTimeStamp,Make,Model,Color,licensePlate,Violation1,Violation2,Violation3,Violation4,Violation5")] Cars cars)
         {
-
             if (ModelState.IsValid)
             {
                 cars.DateTimeStamp = DateTime.Now;
@@ -108,11 +92,7 @@ namespace SPVTMaster.Controllers
             return View(cars);
         }
 
-
-
-
         // GET: Cars/Edit/5
-        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -133,8 +113,7 @@ namespace SPVTMaster.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Make,Model,Color,licensePlate,DateTime,Description")] Models.Cars cars)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,DateTimeStamp,Make,Model,Color,licensePlate,Violation1,Violation2,Violation3,Violation4,Violation5")] Cars cars)
         {
             if (id != cars.Id)
             {
@@ -165,10 +144,6 @@ namespace SPVTMaster.Controllers
         }
 
         // GET: Cars/Delete/5
-        //[HttpGet("admin")]
-        //[Authorize(Policy = "AdminOnly")]
-        [HttpGet]
-        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

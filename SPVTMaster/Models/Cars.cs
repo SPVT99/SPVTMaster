@@ -15,11 +15,11 @@ namespace SPVTMaster.Models
         [DataType(DataType.DateTime)]
         public DateTime DateTimeStamp { set; get; }
 
-        [MinLength(1)]
-        [MaxLength(1024)]
-        [Display(Name = "Violation Type")]
-        [Required]
-        public string Description { get; set; }
+        //[MinLength(1)]
+        //[MaxLength(1024)]
+        //[Display(Name = "Violation Type")]
+        //[Required]
+        //public string Description { get; set; }
 
         //[RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
         [StringLength(60, MinimumLength = 3)]
@@ -42,9 +42,13 @@ namespace SPVTMaster.Models
         public string licensePlate { get; set; }
 
         public string Violation1 { get; set; }
+
         public string Violation2 { get; set; }
+
         public string Violation3 { get; set; }
+
         public string Violation4 { get; set; }
+
         public string Violation5 { get; set; }
     }
 }

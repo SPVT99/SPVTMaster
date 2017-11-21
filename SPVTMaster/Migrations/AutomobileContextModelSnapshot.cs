@@ -81,10 +81,6 @@ namespace SPVTMaster.Migrations
 
                     b.Property<DateTime>("DateTimeStamp");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(1024);
-
                     b.Property<string>("Make")
                         .IsRequired()
                         .HasMaxLength(60);
