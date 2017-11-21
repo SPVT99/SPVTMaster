@@ -92,6 +92,16 @@ namespace SPVTMaster.Migrations
                     b.Property<string>("Model")
                         .IsRequired();
 
+                    b.Property<string>("Violation1");
+
+                    b.Property<string>("Violation2");
+
+                    b.Property<string>("Violation3");
+
+                    b.Property<string>("Violation4");
+
+                    b.Property<string>("Violation5");
+
                     b.Property<string>("licensePlate")
                         .IsRequired()
                         .HasMaxLength(60);
@@ -103,12 +113,12 @@ namespace SPVTMaster.Migrations
 
             modelBuilder.Entity("SPVTMaster.Models.Category", b =>
                 {
-                    b.Property<int>("CategoryID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("CategoryName");
+                    b.Property<string>("Name");
 
-                    b.HasKey("CategoryID");
+                    b.HasKey("ID");
 
                     b.ToTable("Category");
                 });

@@ -1,4 +1,4 @@
-﻿// Write your JavaScript code.
+﻿// ***** Alert cars create empty fields must be filled out ***** //
 function validation() {
     var make = document.getElementById("make").value;
     var model = document.getElementById("model").value;
@@ -25,5 +25,21 @@ function validation() {
         alert("Violation Type input must be filled out!")
     }
 }
-//test
-//testingbullshit
+
+
+// ***** Dropdown menu for cars edit ***** //
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+               openDropdown.classList.remove('show');
+            }
+        }
+    }
+}

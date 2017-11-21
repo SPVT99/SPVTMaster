@@ -40,5 +40,11 @@ namespace SPVTMaster.Models
         [StringLength(60, MinimumLength = 3)]
         [Required]
         public string licensePlate { get; set; }
+
+        public string Violation1 { get; set; }
+        public string Violation2 { get; set; }
+        public string Violation3 { get; set; }
+        public string Violation4 { get; set; }
+        public string Violation5 { get; set; }
     }
 }

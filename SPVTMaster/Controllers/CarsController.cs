@@ -95,7 +95,7 @@ namespace SPVTMaster.Controllers
         [HttpPost]
         [Authorize]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Make,Model,Color,licensePlate,DateTime,Description")] Models.Cars cars)
+        public async Task<IActionResult> Create([Bind("Id,Make,Model,Color,licensePlate,DateTime,Descriptiion")] Models.Cars cars)
         {
 
             if (ModelState.IsValid)

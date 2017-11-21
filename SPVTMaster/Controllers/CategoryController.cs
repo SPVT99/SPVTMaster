@@ -17,8 +17,19 @@ namespace SPVTMaster.Controllers
         // GET: Category
         public ActionResult Index(MainViewModel MainModel)
         {
+            //List<Category> clist = new List<Category>();
+            //clist.Add(new Category { ID = 1, Name = "You must only park in 1 parking space at a time" });
+            //clist.Add(new Category { ID = 2, Name = "You must only park in designated parking spaces" });
+            //clist.Add(new Category { ID = 3, Name = "You must pull forward into a parking space. Do not pull through or back into any parking spaces." });
+            //clist.Add(new Category { ID = 4, Name = "You must have an Amazon-issued carpool sign in order to park in designated carpool spaces." });
+            //clist.Add(new Category { ID = 5, Name = "You must have a handicapped license plate, or current temporary placard in your front window in order to park in 			    andicapped parking spaces." });
+            //MainViewModel cm = new MainViewModel();
+            //cm.ListCategory = clist;
+            //cm.SelectedAns = string.Empty;
+            //return View(cm);
+
             //-- Get Selected Value from radiobuttonlist 
-            string SelectedValue = MainModel.Selectedanswer;
+            string SelectedValue = MainModel.SelectedAns;
             //-----------------------------------------------
 
 
@@ -32,7 +43,7 @@ namespace SPVTMaster.Controllers
             MainViewModel obj = new MainViewModel
             {
                 ListCategory = categoryList,
-                Selectedanswer = string.Empty
+                SelectedAns = string.Empty
             };
             return View(obj); //--------------- Sending MainViewModel to Index View
         }
