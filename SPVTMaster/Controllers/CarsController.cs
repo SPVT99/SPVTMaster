@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SPVTMaster.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SPVTMaster.Controllers
 {
@@ -19,6 +20,7 @@ namespace SPVTMaster.Controllers
         }
 
         // GET: Cars
+        [Authorize]
         public async Task<IActionResult> Index(string carsMake, string searchString)
         {
             var cars = from m in _context.Cars

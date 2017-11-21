@@ -60,7 +60,7 @@ namespace SPVTMaster.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("Index", "Cars");
                 }
                 if (result.RequiresTwoFactor)
                 {
@@ -242,7 +242,7 @@ namespace SPVTMaster.Controllers
         {
             await _signInManager.SignOutAsync();
             _logger.LogInformation("User logged out.");
-            return RedirectToAction(nameof(HomeController.Index), "Home");
+            return RedirectToAction(nameof(AccountController.Login));
         }
 
         [HttpPost]
@@ -330,7 +330,7 @@ namespace SPVTMaster.Controllers
         {
             if (userId == null || code == null)
             {
-                return RedirectToAction(nameof(HomeController.Index), "Home");
+                return RedirectToAction(nameof(AccountController.Login));
             }
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
@@ -450,7 +450,7 @@ namespace SPVTMaster.Controllers
             }
             else
             {
-                return RedirectToAction(nameof(HomeController.Index), "Home");
+                return RedirectToAction(nameof(AccountController.Login));
             }
         }
 

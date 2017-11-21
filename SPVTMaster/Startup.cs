@@ -106,7 +106,7 @@ namespace SPVTMaster
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Cars}/{action=Index}/{id?}");
             });
 
             // new UserRoleSeed(app.ApplicationServices.GetService<RoleManager<IdentityRole>>());
