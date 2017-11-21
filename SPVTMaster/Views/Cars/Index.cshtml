@@ -41,7 +41,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.cars[0].licensePlate)
             </th>
-            <th></th>
+            <th>Menu</th>
         </tr>
     </thead>
     <tbody>
@@ -64,16 +64,19 @@
                     @Html.DisplayFor(modelItem => item.licensePlate)
                 </td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle dropbtn" type="button" data-toggle="dropdown" onclick="myFunction()">
-                         MENU
-                        </button>
-                        <div class="dropdown-content" id="myDropdown">
-                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
-                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
-                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                        </div>
-                    </div>
+                  <div class="dropdown">
+                        <div  data-toggle="dropdown">
+                            <div class="container1">
+                                <span class="glyphicon glyphicon-menu-hamburger"></span>
+                                </div>
+                           </div>
+                        <ul class="dropdown-menu">
+                            <li><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></li>
+                            <li><a asp-action="Details" asp-route-id="@item.Id">Details</a></li>
+                            <li><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></li>
+                        </ul>
+                    </div> 
+                   
                 </td>
             </tr>
         }
