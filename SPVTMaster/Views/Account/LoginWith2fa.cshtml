@@ -3,8 +3,8 @@
     ViewData["Title"] = "Two-factor authentication";
 }
 
-<h2>@ViewData["Title"]</h2>
-<hr />
+<h2 class="title">@ViewData["Title"]</h2>
+<div class="viewbox">
 <p>Your login is protected with an authenticator app. Enter your authenticator code below.</p>
 <div class="row">
     <div class="col-md-4">
@@ -34,7 +34,7 @@
     Don't have access to your authenticator device? You can 
     <a asp-action="LoginWithRecoveryCode" asp-route-returnUrl="@ViewData["ReturnUrl"]">log in with a recovery code</a>.
 </p>
-
+    </div>
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
 }

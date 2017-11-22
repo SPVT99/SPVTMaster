@@ -3,10 +3,10 @@
     ViewData["Title"] = "Register";
 }
 
-<h2>@ViewData["Title"]</h2>
+<h2 class="title>@ViewData["Title"]</h2>
 <h4>Associate your @ViewData["LoginProvider"] account.</h4>
-<hr />
 
+<div class="viewbox">
 <p class="text-info">
     You've successfully authenticated with <strong>@ViewData["LoginProvider"]</strong>.
     Please enter an email address for this site below and click the Register button to finish
@@ -26,7 +26,7 @@
         </form>
     </div>
 </div>
-
+</div>
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
 }

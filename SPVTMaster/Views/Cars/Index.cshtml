@@ -7,82 +7,82 @@
 <h2 class="title">
     Current Violations</h2>
 <br />
-<div class="divbox">
-         <div class="divbox">
-             <a asp-action="Create" class="form-control">Create New Vehicle </a>
 
-             <br />
-             <form class="divbox" asp-controller="Cars" asp-action="Index" method="get">
+    <div class="divbox">
+        <a asp-action="Create" class="form-control">Create New Vehicle </a>
 
-                 <select asp-for="carsMake" class="form-control modelsearch" asp-items="Model.Make">
-                     <option value="">Search by Make</option>
-                 </select>
-                 <br />
-                 <input class="form-control" type="submit" value="Search Submit" />
+        <br />
+        <form class="divbox" asp-controller="Cars" asp-action="Index" method="get">
 
-                 <br />
-             </form>
-         </div>
+            <select asp-for="carsMake" class="form-control modelsearch" asp-items="Model.Make">
+                <option value="">Search by Make</option>
+            </select>
+            <br />
+            <input class="form-control" type="submit" value="Search Submit" />
+
+            <br />
+        </form>
     </div>
- <br />
+    <br />
 
-<table class="table">
-    <!--a href="~/Views/Cars/Index.cshtml">~/Views/Cars/Index.cshtml</!--a -->
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.cars[0].DateTimeStamp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.cars[0].Make)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.cars[0].Model)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.cars[0].Color)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.cars[0].licensePlate)
-            </th>
-            <th>Menu</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.cars)
-        {
+    <table class="table">
+
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateTimeStamp)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Make)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Model)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Color)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.licensePlate)
-                </td>
-                <td>
-                    <div class="dropdown">
-                        <div data-toggle="dropdown">
-                            <div class="container1">
-                                <span class="glyphicon glyphicon-menu-hamburger"></span>
-                            </div>
-                        </div>
-                        <ul class="dropdown-menu">
-                            <li><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></li>
-                            <li><a asp-action="Details" asp-route-id="@item.Id">Details</a></li>
-                            <li><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></li>
-                        </ul>
-                    </div>
-
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.cars[0].DateTimeStamp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cars[0].Make)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cars[0].Model)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cars[0].Color)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cars[0].licensePlate)
+                </th>
+                <th>Menu</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.cars)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateTimeStamp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Make)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Model)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Color)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.licensePlate)
+                    </td>
+                    <td>
+                        <div class="dropdown">
+                            <div data-toggle="dropdown">
+                                <div class="container1">
+                                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                                </div>
+                            </div>
+
+                            <ul class="dropdown-menu">
+                                <li><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></li>
+                                <li><a asp-action="Details" asp-route-id="@item.Id">Details</a></li>
+                                <li><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></li>
+                            </ul>
+                        </div>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

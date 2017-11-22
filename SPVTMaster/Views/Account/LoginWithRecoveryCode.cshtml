@@ -3,8 +3,8 @@
     ViewData["Title"] = "Recovery code verification";
 }
 
-<h2>@ViewData["Title"]</h2>
-<hr />
+<h2 class="title">@ViewData["Title"]</h2>
+<div class="viewbox">
 <p>
     You have requested to login with a recovery code. This login will not be remembered until you provide
     an authenticator app code at login or disable 2FA and login again.
@@ -22,7 +22,7 @@
         </form>
     </div>
 </div>
-
+</div>
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
 }
