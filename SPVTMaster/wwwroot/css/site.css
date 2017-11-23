@@ -8,6 +8,9 @@ body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
+.icons{
+    color: orange;
+}
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
@@ -119,7 +122,4 @@ table, th{
     display: inline-block;
     text-align: center;
 
-}
-.nav-stacked{
-    background-color: orange;
 }
