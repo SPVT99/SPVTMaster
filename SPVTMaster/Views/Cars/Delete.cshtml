@@ -39,18 +39,21 @@
         <dt>
             @Html.DisplayNameFor(model => model.Violation)
         </dt>
-        <dd>
+        <dd5>
             @Html.DisplayFor(model => model.Violation)
-        </dd>
+        </dd5>
     </dl>
     </div>
     <br />
+    @if (User.IsInRole("Admin"))
+    {
     <div class="divbox">
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
+    <form asp-action="Delete"   new { onclick = "return confirm('Are sure wants to delete?');" })>
+        <input type="hidden" asp-for="Id"  />
         <input type="submit" value="Delete" class="form-control" />
         <br />
         <a class="form-control" asp-action="Index">Back to List</a>
     </form>
         </div>
-</div>
+    }
+       

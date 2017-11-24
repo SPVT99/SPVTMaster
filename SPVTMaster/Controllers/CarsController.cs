@@ -165,6 +165,8 @@ namespace SPVTMaster.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            
+                   
             var cars = await _context.Cars.SingleOrDefaultAsync(m => m.Id == id);
             _context.Cars.Remove(cars);
             await _context.SaveChangesAsync();
