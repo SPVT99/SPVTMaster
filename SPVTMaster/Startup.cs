@@ -165,6 +165,7 @@ namespace SPVTMaster
                     await UserManager.AddToRoleAsync(poweruser, "Admin");
                 }
             }
+
         }
         
 

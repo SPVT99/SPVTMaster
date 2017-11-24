@@ -22,7 +22,7 @@ namespace SPVTMaster.Controllers
         [Authorize]
         public IActionResult Contact()
         {
-            ViewData["Message"] = "testing testing";
+            ViewData["Message"] = "Testing Testing";
 
             return View();
         }

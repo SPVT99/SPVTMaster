@@ -9,6 +9,8 @@ using Microsoft.Extensions.Logging;
 using SPVTMaster.Models;
 using SPVTMaster.Models.AccountViewModels;
 using SPVTMaster.Services;
+
+
 namespace SPVTMaster.Controllers
 {
     [Authorize]
@@ -203,6 +205,8 @@ namespace SPVTMaster.Controllers
         [Authorize(Roles ="Admin, Manager")]
         public IActionResult Register(string returnUrl = null)
         {
+
+
             ViewData["ReturnUrl"] = returnUrl;
             return View();
         }
