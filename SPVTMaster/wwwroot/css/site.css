@@ -1,5 +1,16 @@
 ﻿@import url('site.min.css');
 @import url('site.css');
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
 body {
     background-image: url('../images/hexagon-bg.png');
     background-position: center;
@@ -7,14 +18,31 @@ body {
     background-size: cover;
     padding-top: 50px;
     padding-bottom: 20px;
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+.footer {
+    color: grey;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: black;
+    text-align: center;
 }
 .icons{
     color: orange;
 }
-
+.download{
+    height: 40px;
+}
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
+   
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -46,9 +74,9 @@ body {
    text-decoration:none;
 }
 
-.mybtn{
-    background-color: orange;
-    border: 1px solid orange;
+.mybtn {
+    background-color: #EBA53D;
+    border: 1px solid #EBA53D;
     color: black;
 }
 .mybtn:hover{
@@ -57,13 +85,13 @@ body {
     color: orange
 }
 
-table{
+table {
     text-align: center;
     border: 0.7em solid orange;
     border-radius: 13px;
     border-collapse: collapse;
     border-style: hidden;
-    box-shadow:0 0 0 4px #ffa500;
+    box-shadow: 0 0 0 4px #ffa500;
     background-color: gray;
     padding: 0.8em;
     width: auto;
@@ -75,11 +103,9 @@ table{
     padding: 0.8em;
     width: auto;
 }
-.footnote{
-    position:fixed;
-    bottom: 0;
-    left: 0;
+.footnote {
     color: orange;
+    position: absolute;
 }
 .title {
     font-size: 60px;
@@ -92,8 +118,8 @@ table{
     display: block;
 }
 
-.btn-primary{
-    background-color:orange;
+.btn-primary {
+    background-color: orange;
 }
 
 table, th{
@@ -107,14 +133,7 @@ table, th{
     max-width: 25px 
 }
 
-.glyphicon:hover {
-    color: orange;
-   
-}
-.glyphicon {
-    height: 2em;
-    width: 2em;
-}
+
 
 
 .divbox {
