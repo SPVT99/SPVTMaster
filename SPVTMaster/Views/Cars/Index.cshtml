@@ -29,7 +29,7 @@
 
         <thead>
             <tr>
-                <th>
+                <th class="hidden-sm hidden-xs">
                     @Html.DisplayNameFor(model => model.cars[0].DateTimeStamp)
                 </th>
                 <th>
@@ -38,7 +38,7 @@
                 <th>
                     @Html.DisplayNameFor(model => model.cars[0].Model)
                 </th>
-                <th>
+                <th class="hidden-sm hidden-xs">
                     @Html.DisplayNameFor(model => model.cars[0].Color)
                 </th>
                 <th>
@@ -51,7 +51,7 @@
             @foreach (var item in Model.cars)
             {
                 <tr>
-                    <td>
+                    <td class="hidden-sm hidden-xs">
                         @Html.DisplayFor(modelItem => item.DateTimeStamp)
                     </td>
                     <td>
@@ -60,7 +60,7 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Model)
                     </td>
-                    <td>
+                    <td class="hidden-sm hidden-xs">
                         @Html.DisplayFor(modelItem => item.Color)
                     </td>
                     <td>

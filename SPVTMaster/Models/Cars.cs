@@ -36,7 +36,7 @@ namespace SPVTMaster.Models
         [Required]
         public string Color { get; set; }
 
-        [Display(Name = "License Plate")]
+        [Display(Name = "Plate #")]
         [StringLength(60, MinimumLength = 3)]
         [Required]
         public string licensePlate { get; set; }
