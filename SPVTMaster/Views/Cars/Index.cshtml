@@ -81,7 +81,7 @@
                                 <li><a asp-action="Details" asp-route-id="@item.Id">Details</a></li>
                                 @if (User.IsInRole("Admin"))
                                 {
-                                    
+
                                     <li><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></li>
                                 }
                             </ul>
@@ -92,3 +92,4 @@
             }
         </tbody>
     </table>
+             

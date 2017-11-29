@@ -2,52 +2,55 @@
 
 <div>
     <h4 class="title">Vioation Details</h4>
-   <div class="viewbox"> 
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.DateTimeStamp)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.DateTimeStamp)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Make)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Make)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Model)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Model)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Color)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Color)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.licensePlate)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.licensePlate)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Violation)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Violation)
-        </dd>
-    </dl>
-       </div>
-</div>
-<br />
-<div class="divbox">
-    <a class="form-control" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> 
+    <div class="viewbox">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.DateTimeStamp)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DateTimeStamp)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Make)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Make)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Model)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Model)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Color)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Color)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.licensePlate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.licensePlate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Violation)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Violation)
+            </dd>
+        </dl>
+        <div class="divbox">
+            <a class="form-control" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+        </div>
+        <br />
+        <br />
+     </div>  
     <br />
+</div>
+
+<div class="divbox">
     <a class="form-control" asp-action="Index">Back to List</a>
 </div>
-<br />
 

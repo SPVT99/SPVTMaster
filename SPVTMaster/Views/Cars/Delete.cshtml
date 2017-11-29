@@ -44,7 +44,7 @@
         </dd5>
     </dl>
     @if (User.IsInRole("Admin"))
-    {
+     {
         <div class="divbox">
             <form asp-action="Delete" new { onclick="return confirm('Are sure wants to delete?');" })>
                 <input type="hidden" asp-for="Id" />
@@ -53,9 +53,10 @@
             </form>
         </div>
 
-    }
+     }
 
-    
+    <br />
+    <br />
     </div>
     <br />
     <div class="divbox">
