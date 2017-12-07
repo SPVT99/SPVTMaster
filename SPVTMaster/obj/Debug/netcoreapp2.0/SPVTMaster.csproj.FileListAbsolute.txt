@@ -70,3 +70,15 @@ C:\Users\Mikel\Contacts\Desktop\New folder\SPVTMaster\obj\Debug\netcoreapp2.0\SP
 C:\Users\Mikel\Contacts\Desktop\New folder\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.AssemblyInfo.cs
 C:\Users\Mikel\Contacts\Desktop\New folder\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.dll
 C:\Users\Mikel\Contacts\Desktop\New folder\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.pdb
+C:\Users\Mikel\Contacts\Desktop\SPVTMaster\SPVTMaster\bin\Debug\netcoreapp2.0\SPVTMaster.deps.json
+C:\Users\Mikel\Contacts\Desktop\SPVTMaster\SPVTMaster\bin\Debug\netcoreapp2.0\SPVTMaster.runtimeconfig.json
+C:\Users\Mikel\Contacts\Desktop\SPVTMaster\SPVTMaster\bin\Debug\netcoreapp2.0\SPVTMaster.runtimeconfig.dev.json
+C:\Users\Mikel\Contacts\Desktop\SPVTMaster\SPVTMaster\bin\Debug\netcoreapp2.0\SPVTMaster.dll
+C:\Users\Mikel\Contacts\Desktop\SPVTMaster\SPVTMaster\bin\Debug\netcoreapp2.0\SPVTMaster.pdb
+C:\Users\Mikel\Contacts\Desktop\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.csprojResolveAssemblyReference.cache
+C:\Users\Mikel\Contacts\Desktop\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.csproj.CoreCompileInputs.cache
+C:\Users\Mikel\Contacts\Desktop\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Mikel\Contacts\Desktop\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.AssemblyInfoInputs.cache
+C:\Users\Mikel\Contacts\Desktop\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.AssemblyInfo.cs
+C:\Users\Mikel\Contacts\Desktop\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.dll
+C:\Users\Mikel\Contacts\Desktop\SPVTMaster\SPVTMaster\obj\Debug\netcoreapp2.0\SPVTMaster.pdb
