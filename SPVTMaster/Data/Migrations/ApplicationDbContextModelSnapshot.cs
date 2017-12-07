@@ -135,8 +135,6 @@ namespace SPVTMaster.Data.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
-                    b.Property<string>("Address");
-
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
@@ -157,7 +155,7 @@ namespace SPVTMaster.Data.Migrations
                     b.Property<string>("NormalizedUserName")
                         .HasMaxLength(256);
 
-                    b.Property<int>("Number");
+                    b.Property<string>("Number");
 
                     b.Property<int>("NumberOfYearsWithCompany");
 
@@ -189,28 +187,6 @@ namespace SPVTMaster.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
-                });
-
-            modelBuilder.Entity("SPVTMaster.Models.RequestAccount", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("DateTime");
-
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("LastName");
-
-                    b.Property<string>("PhoneNumber");
-
-                    b.Property<string>("Position");
-
-                    b.Property<string>("Site");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("RequestAccount");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

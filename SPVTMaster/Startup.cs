@@ -110,7 +110,7 @@ namespace SPVTMaster
             });
 
             // new UserRoleSeed(app.ApplicationServices.GetService<RoleManager<IdentityRole>>());
-            CreateRoles(serviceProvider).Wait();
+            CreateRoles(serviceProvider: serviceProvider).Wait();
         }
 
         private async Task CreateRoles(IServiceProvider serviceProvider)

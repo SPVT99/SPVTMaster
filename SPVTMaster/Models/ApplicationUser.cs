@@ -23,10 +23,10 @@ namespace SPVTMaster.Models
             public int NumberOfYearsWithCompany { get; set; }
 
             [Display(Name = "Phone Number")]
-            public int Number { get; set; }
+            public string Number { get; set; }
 
-            [Display(Name = "Current Address")]
-            public string Address { get; set; }
+            //[Display(Name = "Current Address")]
+            //public string Address { get; set; }
         
     }
 }
