@@ -48,22 +48,23 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model.cars)
+            @foreach (var item in Model.cars) 
+
             {
-                <tr>
-                    <td class="hidden-sm hidden-xs">
+                <tr class="carTable" >
+                    <td class="hidden-sm hidden-xs" >
                         @Html.DisplayFor(modelItem => item.DateTimeStamp)
                     </td>
-                    <td>
+                    <td >
                         @Html.DisplayFor(modelItem => item.Make)
                     </td>
-                    <td>
+                    <td >
                         @Html.DisplayFor(modelItem => item.Model)
                     </td>
-                    <td class="hidden-sm hidden-xs">
+                    <td class="hidden-sm hidden-xs" >
                         @Html.DisplayFor(modelItem => item.Color)
                     </td>
-                    <td>
+                    <td >
                         @Html.DisplayFor(modelItem => item.licensePlate)
                     </td>
                   
@@ -93,3 +94,4 @@
         </tbody>
     </table>
              
+    <script src="~/js/site.js"></script>

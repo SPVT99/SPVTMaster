@@ -22,3 +22,17 @@ function validation() {
     }
     
 }//Testing for bullshit
+
+$(".carTable").mouseover(function () {
+    $(this).addClass("mouseon");
+    $(this).mouseout(function () {
+        $(this).removeClass("mouseon");
+    });
+});
+
+$(".userInput").mouseover(function () {
+    $(this).addClass("mouseon1");
+    $(this).mouseout(function () {
+        $(this).removeClass("mouseon1");
+    });
+});
