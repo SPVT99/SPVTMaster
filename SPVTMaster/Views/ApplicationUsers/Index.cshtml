@@ -13,14 +13,16 @@
 </head>
 <body>
 <p>
-    <a asp-action="Create">Create New</a>
+    <!--a asp-action="Create">Create New</!--a-->
 </p>
+<h1 class="title">Application Users</h1>
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Title)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+              
+            </th>
                 <th>
                     @Html.DisplayNameFor(model => model.SiteLocation)
                 </th>
@@ -35,18 +37,18 @@
                 </th>
                 
                 <th>
-                    @Html.DisplayNameFor(model => model.Email)
+                    @Html.DisplayNameFor(model => model.Title)
                 </th>
              
               
-            <th></th>
+            <th>Menu</th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SiteLocation)
@@ -60,15 +62,30 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Number)
             </td>
-           
+
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @Html.DisplayFor(modelItem => item.Title)
             </td>
-          
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <div class="dropdown">
+                    <div data-toggle="dropdown">
+                        <div class="container1">
+                            <span class="glyphicon glyphicon-menu-hamburger"></span>
+                        </div>
+                    </div>
+
+                    <ul class="dropdown-menu">
+                        <li><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></li>
+                        <li><a asp-action="Details" asp-route-id="@item.Id">Details</a></li>
+                        @if (User.IsInRole("Admin"))
+                {
+
+                    <li><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></li>
+                         }
+                    </ul>
+                </div>
+
+
             </td>
         </tr>
 }
