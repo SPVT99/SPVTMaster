@@ -3,8 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.EntityFrameworkCore.Storage.Internal;
 using SPVTMaster.Data;
 using System;
 
@@ -138,8 +136,6 @@ namespace SPVTMaster.Data.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
-                    b.Property<string>("CurrentSupervisor");
-
                     b.Property<string>("Email")
                         .HasMaxLength(256);
 
@@ -155,10 +151,6 @@ namespace SPVTMaster.Data.Migrations
                     b.Property<string>("NormalizedUserName")
                         .HasMaxLength(256);
 
-                    b.Property<string>("Number");
-
-                    b.Property<int>("NumberOfYearsWithCompany");
-
                     b.Property<string>("PasswordHash");
 
                     b.Property<string>("PhoneNumber");
@@ -166,10 +158,6 @@ namespace SPVTMaster.Data.Migrations
                     b.Property<bool>("PhoneNumberConfirmed");
 
                     b.Property<string>("SecurityStamp");
-
-                    b.Property<string>("SiteLocation");
-
-                    b.Property<string>("Title");
 
                     b.Property<bool>("TwoFactorEnabled");
 

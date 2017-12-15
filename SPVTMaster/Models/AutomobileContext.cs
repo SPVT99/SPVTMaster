@@ -16,11 +16,6 @@ namespace SPVTMaster.Models
 
         public DbSet<Cars> Cars { get; set; }
 
-        //public DbSet<SPVTMaster.Models.ApplicationUser> ApplicationUser { get; set; }
-
-        //public DbSet<Category> Category { get; set; }
-
-        //public DbSet<SPVTMaster.Models.VehicleViolationList> VehicleViolationList { get; set; }
 
         
     }

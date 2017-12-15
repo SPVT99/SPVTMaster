@@ -12,43 +12,72 @@
     <title>Index</title>
 </head>
 <body>
-<p>
-    <!--a asp-action="Create">Create New</!--a-->
-</p>
-<h1 class="title">Application Users</h1>
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-              
-            </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
                 <th>
                     @Html.DisplayNameFor(model => model.SiteLocation)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.CurrentSupervisor)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.NumberOfYearsWithCompany)
+                <th hidden>
+                    @Html.DisplayNameFor(model => model.UserName)
+                </th>
+                <th hidden>
+                    @Html.DisplayNameFor(model => model.NormalizedUserName)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Number)
+                    @Html.DisplayNameFor(model => model.Email)
                 </th>
-                
+                <th hidden>
+                    @Html.DisplayNameFor(model => model.NormalizedEmail)
+                </th>
+                <th hidden>
+                    @Html.DisplayNameFor(model => model.EmailConfirmed)
+                </th>
+                <th hidden>
+                    @Html.DisplayNameFor(model => model.PasswordHash)
+                </th>
+                <th hidden>
+                    @Html.DisplayNameFor(model => model.SecurityStamp)
+                </th>
+                <th hidden>
+                    @Html.DisplayNameFor(model => model.ConcurrencyStamp)
+                </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Title)
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
                 </th>
-             
-              
-            <th>Menu</th>
+                <th hidden>
+                    @Html.DisplayNameFor(model => model.PhoneNumberConfirmed)
+                </th>
+                <th hidden>
+                    @Html.DisplayNameFor(model => model.TwoFactorEnabled)
+                </th>
+                <th hidden>
+                    @Html.DisplayNameFor(model => model.LockoutEnd)
+                </th>
+                <th hidden>
+                    @Html.DisplayNameFor(model => model.LockoutEnabled)
+                </th>
+                <th hidden>
+                    @Html.DisplayNameFor(model => model.AccessFailedCount)
+                </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr class="carTable">
+        <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SiteLocation)
@@ -56,36 +85,52 @@
             <td>
                 @Html.DisplayFor(modelItem => item.CurrentSupervisor)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumberOfYearsWithCompany)
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.NormalizedUserName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Number)
+                @Html.DisplayFor(modelItem => item.Email)
             </td>
-
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.NormalizedEmail)
+            </td>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.EmailConfirmed)
+            </td>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.PasswordHash)
+            </td>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.SecurityStamp)
+            </td>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.ConcurrencyStamp)
             </td>
             <td>
-                <div class="dropdown">
-                    <div data-toggle="dropdown">
-                        <div class="container1">
-                            <span class="glyphicon glyphicon-menu-hamburger"></span>
-                        </div>
-                    </div>
-
-                    <ul class="dropdown-menu">
-                        <li><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></li>
-                        <li><a asp-action="Details" asp-route-id="@item.Id">Details</a></li>
-                        @if (User.IsInRole("Admin"))
-                {
-
-                    <li><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></li>
-                         }
-                    </ul>
-                </div>
-
-
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.PhoneNumberConfirmed)
+            </td>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.TwoFactorEnabled)
+            </td>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.LockoutEnd)
+            </td>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.LockoutEnabled)
+            </td>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.AccessFailedCount)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }

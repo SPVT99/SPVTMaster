@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using SPVTMaster.Models;
+using SPVTMaster.Models.ManageViewModels;
 
 namespace SPVTMaster.Data
 {
