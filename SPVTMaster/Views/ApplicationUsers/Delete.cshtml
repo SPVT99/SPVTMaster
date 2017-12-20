@@ -13,10 +13,10 @@
 </head>
 <body>
 
-<h3>Are you sure you want to delete this?</h3>
+
 <div>
-    <h4>ApplicationUser</h4>
-    <hr />
+    <h4 class="title">Delete Application User</h4>
+<div class="viewbox">
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Title)
@@ -121,12 +121,19 @@
             @Html.DisplayFor(model => model.AccessFailedCount)
         </dd>
     </dl>
-    
-    <form asp-action="Delete">
+
+    <form asp-action="Delete" new { onclick="return confirm('Are sure wants to delete?');" })>
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Delete" class="btn btn-default" /> 
+
     </form>
+
+    </div>
+    <br />
+    <br />
+    <div class="divbox">
+        <a class="form-control" asp-action="Index">Back to List</a>
+    </div>
 </div>
 </body>
 </html>
