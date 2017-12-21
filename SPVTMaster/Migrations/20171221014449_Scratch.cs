@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace SPVTMaster.Migrations
 {
-    public partial class Addingnotesection : Migration
+    public partial class Scratch : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

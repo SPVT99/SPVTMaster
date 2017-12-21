@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore.Storage.Internal;
 using SPVTMaster.Data;
 using System;
 
-namespace SPVTMaster.Data.Migrations
+namespace SPVTMaster.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20171213020404_testingThisNow")]
-    partial class testingThisNow
+    [Migration("20171221142231_AdminUser")]
+    partial class AdminUser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -155,10 +155,6 @@ namespace SPVTMaster.Data.Migrations
 
                     b.Property<string>("NormalizedUserName")
                         .HasMaxLength(256);
-
-                    b.Property<string>("Number");
-
-                    b.Property<int>("NumberOfYearsWithCompany");
 
                     b.Property<string>("PasswordHash");
 

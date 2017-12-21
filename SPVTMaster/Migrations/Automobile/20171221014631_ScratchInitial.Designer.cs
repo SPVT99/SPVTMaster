@@ -8,17 +8,17 @@ using Microsoft.EntityFrameworkCore.Storage.Internal;
 using SPVTMaster.Models;
 using System;
 
-namespace SPVTMaster.Migrations
+namespace SPVTMaster.Migrations.Automobile
 {
     [DbContext(typeof(AutomobileContext))]
-    [Migration("20171104070334_TextAreaBoxes")]
-    partial class TextAreaBoxes
+    [Migration("20171221014631_ScratchInitial")]
+    partial class ScratchInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.0.0-rtm-26452")
+                .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("SPVTMaster.Models.Cars", b =>
@@ -39,10 +39,7 @@ namespace SPVTMaster.Migrations
                     b.Property<string>("Model")
                         .IsRequired();
 
-                    b.Property<string>("TextBox");
-
-                    b.Property<string>("VehicleViolation")
-                        .IsRequired();
+                    b.Property<string>("Violation");
 
                     b.Property<string>("licensePlate")
                         .IsRequired()

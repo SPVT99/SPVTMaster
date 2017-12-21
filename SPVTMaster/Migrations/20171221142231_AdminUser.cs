@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace SPVTMaster.Migrations
 {
-    public partial class TextAreaBoxesTesting : Migration
+    public partial class AdminUser : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

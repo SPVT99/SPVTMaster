@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace SPVTMaster.Data.Migrations
+namespace SPVTMaster.Migrations.Automobile
 {
-    public partial class scratch : Migration
+    public partial class ScratchInitial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

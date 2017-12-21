@@ -13673,7 +13673,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mikel\\.nuget\\packages\\": {},
+    "C:\\Users\\ryanb\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
@@ -13683,18 +13683,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mikel\\Contacts\\Desktop\\SPVTfinal\\SPVTMaster\\SPVTMaster.csproj",
+      "projectUniqueName": "C:\\Users\\ryanb\\Desktop\\SPVTMaster\\SPVTMaster\\SPVTMaster.csproj",
       "projectName": "SPVTMaster",
-      "projectPath": "C:\\Users\\Mikel\\Contacts\\Desktop\\SPVTfinal\\SPVTMaster\\SPVTMaster.csproj",
-      "packagesPath": "C:\\Users\\Mikel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mikel\\Contacts\\Desktop\\SPVTfinal\\SPVTMaster\\obj\\",
+      "projectPath": "C:\\Users\\ryanb\\Desktop\\SPVTMaster\\SPVTMaster\\SPVTMaster.csproj",
+      "packagesPath": "C:\\Users\\ryanb\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ryanb\\Desktop\\SPVTMaster\\SPVTMaster\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Mikel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ryanb\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],

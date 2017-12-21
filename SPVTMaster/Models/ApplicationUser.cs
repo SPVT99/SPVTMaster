@@ -10,6 +10,7 @@ namespace SPVTMaster.Models
     {
 
         [Display(Name = "Company Title")]
+        
         public string Title { get; set; }
 
         [Display(Name = "Current Site")]

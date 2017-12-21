@@ -37,7 +37,8 @@ namespace SPVTMaster
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=Automobile.db;Trusted_Connection=True;";
+            var connection = @"Data Source=den1.mssql6.gear.host;Initial Catalog=automobile111;Persist Security Info=True;User ID=automobile111;Password=Gs4iu?x~DHZ8;";
+                //@"Server=(localdb)\mssqllocaldb;Database=Automobile.db;Trusted_Connection=True;";
             //var connection = @"Server=localhost\SQLEXPRESS01;Database=master;Trusted_Connection=True;";
             services.AddDbContext<AutomobileContext>(options => options.UseSqlServer(connection));
 

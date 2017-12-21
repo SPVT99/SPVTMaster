@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore.Storage.Internal;
 using SPVTMaster.Data;
 using System;
 
-namespace SPVTMaster.Data.Migrations
+namespace SPVTMaster.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20171119060532_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20171221014449_Scratch")]
+    partial class Scratch
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -129,30 +129,12 @@ namespace SPVTMaster.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("SPVTMaster.Models.AdminModelView", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("CurrentSite");
-
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("LastName");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("AdminModelView");
-                });
-
             modelBuilder.Entity("SPVTMaster.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("AccessFailedCount");
-
-                    b.Property<string>("Address");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
@@ -173,10 +155,6 @@ namespace SPVTMaster.Data.Migrations
 
                     b.Property<string>("NormalizedUserName")
                         .HasMaxLength(256);
-
-                    b.Property<int>("Number");
-
-                    b.Property<int>("NumberOfYearsWithCompany");
 
                     b.Property<string>("PasswordHash");
 

@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace SPVTMaster.Controllers
 {
+    [Authorize]
     public class CarsController : Controller
     {
         private readonly AutomobileContext _context;
