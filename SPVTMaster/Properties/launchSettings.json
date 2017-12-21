@@ -3,26 +3,30 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:56671/",
-      "sslPort": 44362
+      "applicationUrl": "spvt8899.gearhostpreview.com",
+      //"applicationUrl": "http://localhost:56671/",
+      "sslPort": 44362,
+      "ASPNETCORE_ENVIRONMENT": "Production"
     }
   },
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "https://localhost:44362/",
+      "launchUrl": "spvt8899.gearhostpreview.com",
+      //"launchUrl": "https://localhost:44362/",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Production"
       }
     },
     "SPVTMaster": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Production"
       },
-      "applicationUrl": "http://localhost:56672/"
+      "applicationUrl": "spvt8899.gearhostpreview.com"
+      //"applicationUrl": "http://localhost:56672/"
     }
   }
 }

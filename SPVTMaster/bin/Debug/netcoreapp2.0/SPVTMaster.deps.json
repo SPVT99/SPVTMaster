@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "9fd399e36fe55648ebc87d8a4f386f27c117e897"
+    "signature": "9fa07335ed134d0bd1d478944b806f32025b8088"
   },
   "compilationOptions": {
     "defines": [
@@ -30,7 +30,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.0.1",
           "Microsoft.EntityFrameworkCore": "2.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
-          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.4",
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.5",
           "Microsoft.EntityFrameworkCore.Tools": "2.0.1",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "2.0.0",
           "Microsoft.NETCore.App": "2.0.0",
@@ -1727,7 +1727,7 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational.Design/1.1.4": {
+      "Microsoft.EntityFrameworkCore.Relational.Design/1.1.5": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "2.0.1",
           "NETStandard.Library": "2.0.0"
@@ -1769,9 +1769,9 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer.Design/1.1.4": {
+      "Microsoft.EntityFrameworkCore.SqlServer.Design/1.1.5": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational.Design": "1.1.4",
+          "Microsoft.EntityFrameworkCore.Relational.Design": "1.1.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
           "NETStandard.Library": "2.0.0"
         },
@@ -5253,12 +5253,12 @@
       "path": "microsoft.entityframeworkcore.relational/2.0.1",
       "hashPath": "microsoft.entityframeworkcore.relational.2.0.1.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Relational.Design/1.1.4": {
+    "Microsoft.EntityFrameworkCore.Relational.Design/1.1.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mYfwte6F3/+U8+HHwz1Ijjwm1aXQtNzIIShAer7U+svjXLRst32tBh4lbVWVT8nm+jJyla78vJ96CJYC16pVzA==",
-      "path": "microsoft.entityframeworkcore.relational.design/1.1.4",
-      "hashPath": "microsoft.entityframeworkcore.relational.design.1.1.4.nupkg.sha512"
+      "sha512": "sha512-WqPO8M9Ho0CiJ1tnIgWgXoAPt8/oIE8lcELZYbvmiVyr59f395HmHQhGCXti0/DePgPb7N6EHTIgCczRyuqIkg==",
+      "path": "microsoft.entityframeworkcore.relational.design/1.1.5",
+      "hashPath": "microsoft.entityframeworkcore.relational.design.1.1.5.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Sqlite/2.0.1": {
       "type": "package",
@@ -5281,12 +5281,12 @@
       "path": "microsoft.entityframeworkcore.sqlserver/2.0.1",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.2.0.1.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.SqlServer.Design/1.1.4": {
+    "Microsoft.EntityFrameworkCore.SqlServer.Design/1.1.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GgPG0fAqbq7ANhEL+ZzpbzEo4tTOZGNBvpmnwdQColPu449lareE96qx+MG179iKzI5U4CxHDORO89bJ4yqFYA==",
-      "path": "microsoft.entityframeworkcore.sqlserver.design/1.1.4",
-      "hashPath": "microsoft.entityframeworkcore.sqlserver.design.1.1.4.nupkg.sha512"
+      "sha512": "sha512-5Pzxg+WEzPivrBYur4uRTQt+c3kWOebWq51nkmkuOtK2O5hjCKS3Lw6Mln2iI/ae7rJcvVW6hUd3rCgctFSmmw==",
+      "path": "microsoft.entityframeworkcore.sqlserver.design/1.1.5",
+      "hashPath": "microsoft.entityframeworkcore.sqlserver.design.1.1.5.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Tools/2.0.1": {
       "type": "package",
