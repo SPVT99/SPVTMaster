@@ -7,7 +7,7 @@
     <script src="https://use.fontawesome.com/8b978bdf58.js"></script>
     <title>@ViewData["Title"] - Security Parking Violation Tracker</title>
 
-    <environment include="Production">
+    <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
@@ -55,12 +55,13 @@
             </footer>
         </div>
 
-        <environment include="Production">
+        <environment include="Development">
             <script src="~/lib/jquery/dist/jquery.js"></script>
             <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-            <script src="~/js/site.js" asp-append-version="true"></script>
+            <script src="~/js/Scripts.js" asp-append-version="true"></script>
+            @*<script src="~/js/site.js" asp-append-version="true"></script>*@
         </environment>
-        <environment include="Production">
+        <environment include="Development">
             <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
                     asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                     asp-fallback-test="window.jQuery"
@@ -73,7 +74,7 @@
                     crossorigin="anonymous"
                     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
             </script>
-            <script src="~/js/site.min.js" asp-append-version="true"></script>
+            <script src="~/js/Scripts.js" asp-append-version="true"></script>
         </environment>
 
         @RenderSection("Scripts", required: false)

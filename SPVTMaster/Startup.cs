@@ -69,7 +69,7 @@ namespace SPVTMaster
 
           
 
-            if (env.IsProduction())
+            if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();
