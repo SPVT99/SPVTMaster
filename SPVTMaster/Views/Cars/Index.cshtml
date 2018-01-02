@@ -5,94 +5,94 @@
 }
 
 <h2 class="title">
-    Current Violations</h2>
+    Current Violations
+</h2>
 <br />
 
-    <div class="divbox">
-        <a asp-action="Create" class="form-control">Create New Vehicle </a>
+<div class="divbox">
+    <a asp-action="Create" class="form-control">Create New Vehicle </a>
+
+    <br />
+    <form class="divbox" asp-controller="Cars" asp-action="Index" method="get">
+
+        <select asp-for="carsMake" class="form-control modelsearch" asp-items="Model.Make">
+            <option value="">Search by Make</option>
+        </select>
+        <br />
+        <input class="form-control" type="submit" value="Search Submit" />
 
         <br />
-        <form class="divbox" asp-controller="Cars" asp-action="Index" method="get">
+    </form>
+</div>
+<br />
 
-            <select asp-for="carsMake" class="form-control modelsearch" asp-items="Model.Make">
-                <option value="">Search by Make</option>
-            </select>
-            <br />
-            <input class="form-control" type="submit" value="Search Submit" />
+<table class="table">
 
-            <br />
-        </form>
-    </div>
-    <br />
+    <thead>
+        <tr>
+            <th class="hidden-sm hidden-xs">
+                @Html.DisplayNameFor(model => model.cars[0].DateTimeStamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cars[0].Make)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cars[0].Model)
+            </th>
+            <th class="hidden-sm hidden-xs">
+                @Html.DisplayNameFor(model => model.cars[0].Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cars[0].licensePlate)
+            </th>
+            <th>Menu</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.cars)
 
-    <table class="table">
+        {
+            <tr class="carTable">
+                <td class="hidden-sm hidden-xs">
+                    @Html.DisplayFor(modelItem => item.DateTimeStamp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Make)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Model)
+                </td>
+                <td class="hidden-sm hidden-xs">
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.licensePlate)
+                </td>
 
-        <thead>
-            <tr>
-                <th class="hidden-sm hidden-xs">
-                    @Html.DisplayNameFor(model => model.cars[0].DateTimeStamp)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.cars[0].Make)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.cars[0].Model)
-                </th>
-                <th class="hidden-sm hidden-xs">
-                    @Html.DisplayNameFor(model => model.cars[0].Color)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.cars[0].licensePlate)
-                </th>
-                <th>Menu</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.cars) 
+                <td>
 
-            {
-                <tr class="carTable" >
-                    <td class="hidden-sm hidden-xs" >
-                        @Html.DisplayFor(modelItem => item.DateTimeStamp)
-                    </td>
-                    <td >
-                        @Html.DisplayFor(modelItem => item.Make)
-                    </td>
-                    <td >
-                        @Html.DisplayFor(modelItem => item.Model)
-                    </td>
-                    <td class="hidden-sm hidden-xs" >
-                        @Html.DisplayFor(modelItem => item.Color)
-                    </td>
-                    <td >
-                        @Html.DisplayFor(modelItem => item.licensePlate)
-                    </td>
-                  
-                    <td>
-                       
-                        <div class="dropdown">
-                            <div data-toggle="dropdown">
-                                <div class="container1">
-                                    <span class="glyphicon glyphicon-menu-hamburger"></span>
-                                </div>
+                    <div class="dropdown">
+                        <div data-toggle="dropdown">
+                            <div class="container1">
+                                <span class="glyphicon glyphicon-menu-hamburger"></span>
                             </div>
-
-                            <ul class="dropdown-menu">
-                                <li><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></li> 
-                                <li><a asp-action="Details" asp-route-id="@item.Id">Details</a></li>
-                                @if (User.IsInRole("Admin"))
-                                {
-
-                                    <li><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></li>
-                                }
-                            </ul>
                         </div>
 
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-             
-    <link href="~/css/site.css" rel="stylesheet" />
-    <script src="~/js/Scripts.js"></script>
+                        <ul class="dropdown-menu">
+                            <li><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></li>
+                            <li><a asp-action="Details" asp-route-id="@item.Id">Details</a></li>
+                            @if (User.IsInRole("Admin"))
+                            {
+
+                                <li><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></li>
+                            }
+                        </ul>
+                    </div>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script src="~/js/Scripts.js"></script>
+<link href="~/css/site.css" rel="stylesheet" />
