@@ -148,3 +148,7 @@ table, th {
     display: inline-block;
     text-align: center;
 }
+
+.highlight {
+    background-color: orange;
+}
